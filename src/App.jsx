@@ -1,3 +1,15 @@
+import { BrowserRouter, Router, Route, Routes } from "react-router-dom";
+import Layout from "./Layout/Layout";
+import Home from "./Home/Home";
+
 export default function App() {
-  return <h1 className="text-3xl font-bold underline">Nevar-System</h1>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
