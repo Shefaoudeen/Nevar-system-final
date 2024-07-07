@@ -125,11 +125,6 @@ const Service1 = () => {
             </div>
           </div>
         </div>
-        {/* <div className="absolute bottom-12 w-screen flex justify-center">
-           <button className="bg-yellow-400 text-xl px-4 py-2 rounded-xl shadow-xl shadow-black/40">
-             Learn More
-            </button>
-        </div> */}
       </div>
     </>
   );
