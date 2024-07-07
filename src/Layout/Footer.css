@@ -1,0 +1,20 @@
+.footer-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.footer-wave svg {
+    position: relative;
+    display: block;
+    width: calc(140% + 1.3px);
+    height: 120px;
+}
+
+.footer-wave .shape-fill {
+    fill: #FFFFFF;
+}

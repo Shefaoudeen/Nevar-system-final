@@ -4,12 +4,13 @@ import About from "./About";
 import Services from "./Services";
 import Clients from "./Clients";
 
+
 const Home = () => {
   return (
     <div>
       <Hero />
       <About />
-      {/* <Services/> */}
+      <Services/>
       <Clients/>
     </div>
   );

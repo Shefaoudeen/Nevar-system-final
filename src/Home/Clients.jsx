@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import arrowIcon from '../assets/icons/arrowIcon.svg'
 import {
   technical1,
   technical2,
@@ -60,10 +61,10 @@ const Clients = () => {
 
 
   return (
-    <div className="h-screen w-screen flex flex-col  justify-evenly logos-center select-none bg-[#2528#D]">
+    <div className="relative h-screen w-screen flex flex-col  justify-evenly logos-center select-none bg-[#25283D]">
       {/* Partners Section */}
       <section className="flex justify-between w-screen logos-center items-center">
-        <div className="shadow-xl relative bg-yellow-400 text-2xl max-w-fit rounded-r-full h-52 flex logos-center transition-all duration-500 ">
+        <div className="shadow-xl relative bg-slate-400 text-2xl max-w-fit rounded-r-full h-52 flex logos-center transition-all duration-500 ">
           <div
             className={` h-full transition-all duration-500 ${
               open == 1 ? "flex translate-x-0 pl-10" : "w-0 -translate-x-full"
@@ -75,21 +76,23 @@ const Clients = () => {
             <img src={technical4} alt="" className="p-3 w-40 object-contain" />
           </div>
           <h1
-            className="min-w-64 cursor-pointer text-center my-auto"
+            className="min-w-72 cursor-pointer text-center my-auto flex justify-center gap-4 py-8"
             onClick={() => (open !== 1 ? setOpen(1) : setOpen(0))}
           >
-            Technical Partners
+            <h2>Technical Partners</h2>
+            <img src={arrowIcon} alt="" className="w-6 rotate-180" />
           </h1>
         </div>
 
-        <h1 className="text-4xl font-bold text-slate-600">OUR PARTNERS</h1>
+        <h1 className={`text-5xl font-semibold text-white ${open==0 || "hidden"}`}>OUR PARTNERS</h1>
 
-        <div className="shadow-xl  relative bg-yellow-400 text-2xl max-w-fit rounded-l-full h-52 flex logos-center transition-all duration-500 ">
+        <div className="shadow-xl relative bg-slate-400 text-2xl max-w-fit rounded-l-full h-52 flex logos-center transition-all duration-500 ">
           <h1
-            className="min-w-64 cursor-pointer text-center my-auto"
+            className="min-w-72 cursor-pointer text-center my-auto flex justify-center gap-4 py-8"
             onClick={() => (open !== 2 ? setOpen(2) : setOpen(0))}
           >
-            Funded Partners
+            <img src={arrowIcon} alt="" className="w-6 " />
+            <h2>Funded Partners</h2>
           </h1>
           <div
             className={`h-[90%] my-auto transition-all duration-500 ${
@@ -106,12 +109,13 @@ const Clients = () => {
       {/* CLient Section */}
 
       <section className="flex flex-col mt-10">
-        <h1 className="text-center text-4xl font-bold text-slate-600">
-          Our Clients
-        </h1>
-        <div>
+        <div className="flex gap-4 justify-center text-center text-5xl font-semibold text-white">
+          <h1>Our</h1>
+          <h2 className="text-yellow-400">Clients</h2>
+        </div>
+        <div className="mt-4">
           {/* clients logo horizontal scroll */}
-          <div className="flex flex-col gap-6 w-screen my-10 logos-center justify-center">
+          <div className="flex flex-col gap-6 w-screen my-10 logos-center justify-center bg-white">
             <div className=" py-2 md:py-4 w-screen flex-wrap overflow-hidden">
               <div id="clientScroll" className={`flex`} >
                 {ClientLogos.map((logo, index) => {
