@@ -60,7 +60,7 @@ const Clients = () => {
 
 
   return (
-    <div className="h-screen w-screen flex flex-col  justify-evenly logos-center select-none bg-[#2528#D]">
+    <div className="h-screen w-screen flex flex-col  justify-evenly logos-center select-none bg-[#25283D]">
       {/* Partners Section */}
       <section className="flex justify-between w-screen logos-center items-center">
         <div className="shadow-xl relative bg-yellow-400 text-2xl max-w-fit rounded-r-full h-52 flex logos-center transition-all duration-500 ">
@@ -82,7 +82,7 @@ const Clients = () => {
           </h1>
         </div>
 
-        <h1 className="text-4xl font-bold text-slate-600">OUR PARTNERS</h1>
+        <h1 className="text-4xl font-bold text-white">OUR PARTNERS</h1>
 
         <div className="shadow-xl  relative bg-yellow-400 text-2xl max-w-fit rounded-l-full h-52 flex logos-center transition-all duration-500 ">
           <h1
@@ -106,12 +106,13 @@ const Clients = () => {
       {/* CLient Section */}
 
       <section className="flex flex-col mt-10">
-        <h1 className="text-center text-4xl font-bold text-slate-600">
-          Our Clients
-        </h1>
+        <div className="flex gap-4 justify-center text-center text-5xl font-semibold text-white">
+          <h1>Our</h1>
+          <h2 className="text-yellow-400">Clients</h2>
+        </div>
         <div>
           {/* clients logo horizontal scroll */}
-          <div className="flex flex-col gap-6 w-screen my-10 logos-center justify-center">
+          <div className="flex flex-col gap-6 w-screen my-10 logos-center justify-center bg-white">
             <div className=" py-2 md:py-4 w-screen flex-wrap overflow-hidden">
               <div id="clientScroll" className={`flex`} >
                 {ClientLogos.map((logo, index) => {
