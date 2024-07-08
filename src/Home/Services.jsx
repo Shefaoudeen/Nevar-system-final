@@ -125,6 +125,7 @@ const Service1 = () => {
             </div>
           </div>
         </div>
+        
       </div>
     </>
   );
