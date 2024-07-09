@@ -1,35 +1,31 @@
 import React, { useState } from "react";
-import { video1,video2,video3,video4 } from "../assets/Videos";
+import { video1, video2, video3, video4 } from "../assets/Videos";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SequenceAnimation from "../Utils/SequenceAnimation";
 
-
 const videos = [video1, video2, video3, video4];
 const Service1 = () => {
-
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
-
-    gsap.to('#container',{
-      scrollTrigger : {
-        trigger : '#container',
-        pin : true,
-        scrub : 1,
-        start : 'start start',
+    gsap.to("#container", {
+      scrollTrigger: {
+        trigger: "#container",
+        pin: true,
+        scrub: 1,
+        start: "start start",
         end: "bottom top",
-      }
-    })
+      },
+    });
+  }, []);
 
-  },[])
+  const [hoveringVideo, setHoveringVideo] = useState(0);
 
-  const [hoveringVideo,setHoveringVideo] = useState(0);
-  
   return (
     <>
       <div
-        className="relative h-screen w-screen bg-white flex justify-center select-none"
+        className="relative shadow-2xl shadow-gray-500 h-screen w-screen bg-white flex justify-center select-none"
         id="container"
       >
         <div
@@ -81,7 +77,12 @@ const Service1 = () => {
             style={{ writingMode: "vertical-lr", textOrientation: "upright" }}
             className="text-4xl h-screen text-center font-extrabold text-slate-500 min-w-2/12 flex justify-center"
           >
-            <SequenceAnimation path={"OurServices-Sequence"} totalFrames={70} totalHeight={691} totalWidth={160}/>
+            <SequenceAnimation
+              path={"OurServices-Sequence"}
+              totalFrames={70}
+              totalHeight={691}
+              totalWidth={160}
+            />
           </div>
 
           <div className="h-screen w-full">
@@ -125,7 +126,6 @@ const Service1 = () => {
             </div>
           </div>
         </div>
-        
       </div>
     </>
   );
