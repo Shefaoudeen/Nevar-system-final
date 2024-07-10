@@ -20,7 +20,7 @@ const SequenceAnimation = ({totalFrames,path,totalHeight,totalWidth}) => {
             scrollTrigger: {
               trigger: canvasRef.current,
               start: "start bottom",
-              end: "bottom top",
+              end: "bottom center",
               scrub: 1,
             },
             onUpdate: render,
