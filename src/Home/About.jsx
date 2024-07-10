@@ -30,7 +30,7 @@ const About = () => {
         trigger: ".stats",
         start: "100px bottom",
         end: "bottom top",
-        onToggle: ({ isActive }) => setStatsInView(true),
+        onToggle: () => setStatsInView(true),
       },
     });
 
