@@ -29,6 +29,11 @@ const Hero = () => {
       duration: 3,
       translateY: 0,
     });
+
+    gsap.to('#landing',{
+      y: 0,
+      duration : 0.5
+    })
   }, []);
 
   const handleOnClick = ({ target }) => {
@@ -39,7 +44,7 @@ const Hero = () => {
   return (
     <section
       id="landing"
-      className={`w-screen relative duration-1000 bg-[#F7F7F7] overflow-hidden`}
+      className={`w-screen relative duration-1000 translate-y-[1000px] bg-[#F7F7F7] overflow-hidden`}
     >
       <div className="absolute z-[1000] top-[45%] right-6">
         <div
@@ -115,7 +120,7 @@ const Hero = () => {
           </div>
           <div className="flex items-center justify-center object-fill -mt-2 h-[100vh] w-[100vw] bg-gradient-to-b from-gray-900 to-blue-950">
             {" "}
-            <h2 className="text-4xl text-white">Video 2</h2>{" "}
+            <h2 className="text-6xl bg-gradient-to-b from-slate-300 to-slate-600 bg-clip-text text-transparent font-extrabold scale-[300%]">Video 2</h2>{" "}
           </div>
         </div>
         <div className="pt-2 rounded-3xl relative w-screen h-screen">
@@ -138,7 +143,7 @@ const Hero = () => {
           </div>
           <div className="flex items-center justify-center object-fill -mt-2 h-[100vh] w-[100vw] bg-gradient-to-b from-gray-900 to-blue-950">
             {" "}
-            <h2 className="text-4xl text-white">Video 3</h2>{" "}
+            <h2 className="text-6xl bg-gradient-to-b from-slate-300 to-slate-600 bg-clip-text text-transparent font-extrabold scale-[300%]">Video 3</h2>{" "}
           </div>
         </div>
       </div>
