@@ -1,13 +1,15 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Img1, Img2, Img3 } from "../assets/images";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/all";
+import CountUp from "react-countup";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   const aboutRef = useRef(null);
+  const [statsInView,setStatsInView] = useState(false);
 
   useGSAP(() => {
     const content = gsap.utils.toArray(aboutRef.current);
@@ -22,22 +24,32 @@ const About = () => {
         },
       });
     });
+
+    gsap.to(".stats", {
+      scrollTrigger: {
+        trigger: ".stats",
+        start: "100px bottom",
+        end: "bottom top",
+        onToggle: ({ isActive }) => setStatsInView(true),
+      },
+    });
+
   }, []);
 
   const stats = [
     {
       id: 0,
-      num: "55+",
+      num: 55,
       text: "Clients",
     },
     {
       id: 1,
-      num: "7000+",
+      num: 700,
       text: "Area Covered (in SQ.KM)",
     },
     {
       id: 2,
-      num: "70+",
+      num: 70,
       text: "Projects",
     },
   ];
@@ -106,7 +118,23 @@ const About = () => {
           Visit Our blogs
         </button>
       </div>
-      <div className="flex poppins-regular w-screen justify-around px-10 mb-[100px]">
+      <div className="flex poppins-regular w-screen justify-around px-10 mb-[100px] stats">
+        {stats.map((ele,index) => {
+          return (
+            <div className="text-center" key={index}>
+              <h1 className="text-8xl bruno-ace-sc-regular">
+                {statsInView && (
+                <CountUp start={0} end={ele.num} duration={2}></CountUp> 
+                )}
+                +</h1>
+              <h1 className="text-indigo-500 poppins-medium text-xl">
+                {ele.text}
+              </h1>
+            </div>
+          );
+        })}
+      </div>
+      {/* <div className="flex poppins-regular w-screen justify-around px-10 mb-[100px]">
         {stats.map((ele) => {
           return (
             <div className="text-center">
@@ -117,7 +145,7 @@ const About = () => {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </section>
   );
 };
