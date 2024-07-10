@@ -61,11 +61,11 @@ const About = () => {
           Our Speciality
         </h1>
         <div className="flex gap-[100px] w-screen justify-center py-20">
-          <div className="bg-slate-500 relative min-w-[300px] overflow-hidden flex justify-center items-center text-center min-h-[400px] rounded-2xl rounded-tr-[100px] rounded-bl-[100px]">
+          <div className="group bg-slate-500 relative min-w-[300px] overflow-hidden flex justify-center items-center text-center min-h-[400px] rounded-2xl rounded-tr-[100px] rounded-bl-[100px]">
             <img
               src={Img1}
               alt=""
-              className="h-full w-[300px] object-fill rounded-2xl rounded-tr-[100px] rounded-bl-[100px] hover:scale-125 duration-200 ease-linear"
+              className="h-full w-[300px] object-fill rounded-2xl rounded-tr-[100px] rounded-bl-[100px] group-hover:scale-125 duration-200 ease-linear"
             />
             <div className="text-white poppins-medium text-4xl z-50 absolute">
               <h1>Area</h1>
@@ -73,11 +73,11 @@ const About = () => {
               <h1>4 - 5 SQ.KM</h1>
             </div>
           </div>
-          <div className="bg-slate-500 relative min-w-[300px] overflow-hidden flex justify-center items-center text-center min-h-[400px] rounded-2xl rounded-tr-[100px] rounded-bl-[100px]">
+          <div className="group bg-slate-500 relative min-w-[300px] overflow-hidden flex justify-center items-center text-center min-h-[400px] rounded-2xl rounded-tr-[100px] rounded-bl-[100px]">
             <img
               src={Img2}
               alt=""
-              className="h-full w-[300px] object-cover rounded-2xl rounded-tr-[100px] rounded-bl-[100px] hover:scale-125 duration-200 ease-linear"
+              className="h-full w-[300px] object-cover rounded-2xl rounded-tr-[100px] rounded-bl-[100px] group-hover:scale-125 duration-200 ease-linear"
             />
             <div className="text-white poppins-medium text-4xl z-50 absolute">
               <h1>Tracking</h1>
@@ -85,11 +85,11 @@ const About = () => {
               <h1>Feature</h1>
             </div>
           </div>
-          <div className="bg-slate-500 relative min-w-[300px] overflow-hidden flex justify-center items-center text-center min-h-[400px] rounded-2xl rounded-tr-[100px] rounded-bl-[100px]">
+          <div className="group bg-slate-500 relative min-w-[300px] overflow-hidden flex justify-center items-center text-center min-h-[400px] rounded-2xl rounded-tr-[100px] rounded-bl-[100px]">
             <img
               src={Img3}
               alt=""
-              className="h-full w-[300px] object-fill rounded-2xl rounded-tr-[100px] rounded-bl-[100px] hover:scale-125 duration-200 ease-linear"
+              className="h-full w-[300px] object-fill rounded-2xl rounded-tr-[100px] rounded-bl-[100px] group-hover:scale-125 duration-200 ease-linear"
             />
             <div className="text-white poppins-medium text-4xl z-50 absolute">
               <h1>In Build</h1>

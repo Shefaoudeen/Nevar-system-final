@@ -15,12 +15,10 @@ const Service1 = () => {
         pin: true,
         scrub: 1,
         start: "start start",
-        end: "bottom top",
+        end: "bottom center",
       },
     });
   }, []);
-
-  const [hoveringVideo, setHoveringVideo] = useState(0);
 
   return (
     <>
@@ -34,18 +32,14 @@ const Service1 = () => {
         >
           <div className="h-screen w-full">
             <div
-              className={`rounded-lg overflow-hidden flex items-center  justify-center object-contain p-6  hover:scale-110 duration-300 ${
-                hoveringVideo === 1 || hoveringVideo === 0 ? "" : "blur-sm"
-              }`}
+              className={`rounded-lg overflow-hidden flex items-center  justify-center object-contain p-6  hover:scale-110 duration-300`}
             >
               <video
                 onMouseOver={(e) => {
                   e.target.play();
-                  setHoveringVideo(1);
                 }}
                 onMouseLeave={(e) => {
                   e.target.pause();
-                  setHoveringVideo(0);
                 }}
                 muted
                 loop
@@ -53,18 +47,14 @@ const Service1 = () => {
               ></video>
             </div>
             <div
-              className={`rounded-lg overflow-hidden flex items-center  justify-center object-contain p-6 hover:scale-110 duration-300 ${
-                hoveringVideo === 2 || hoveringVideo === 0 ? "" : "blur-sm"
-              }`}
+              className={`rounded-lg overflow-hidden flex items-center  justify-center object-contain p-6 hover:scale-110 duration-300`}
             >
               <video
                 onMouseOver={(e) => {
                   e.target.play();
-                  setHoveringVideo(2);
                 }}
                 onMouseLeave={(e) => {
                   e.target.pause();
-                  setHoveringVideo(0);
                 }}
                 muted
                 loop
@@ -87,18 +77,14 @@ const Service1 = () => {
 
           <div className="h-screen w-full">
             <div
-              className={`rounded-lg overflow-hidden flex items-center justify-center object-contain p-6 hover:scale-110 duration-300 ${
-                hoveringVideo === 3 || hoveringVideo === 0 ? "" : "blur-sm"
-              }`}
+              className={`rounded-lg overflow-hidden flex items-center justify-center object-contain p-6 hover:scale-110 duration-300`}
             >
               <video
                 onMouseOver={(e) => {
                   e.target.play();
-                  setHoveringVideo(3);
                 }}
                 onMouseLeave={(e) => {
                   e.target.pause();
-                  setHoveringVideo(0);
                 }}
                 muted
                 loop
@@ -106,18 +92,14 @@ const Service1 = () => {
               ></video>
             </div>
             <div
-              className={`rounded-lg overflow-hidden flex items-center justify-center object-contain p-6 hover:scale-110 duration-300 ${
-                hoveringVideo === 4 || hoveringVideo === 0 ? "" : "blur-sm"
-              }`}
+              className={`rounded-lg overflow-hidden flex items-center justify-center object-contain p-6 hover:scale-110 duration-300`}
             >
               <video
                 onMouseOver={(e) => {
                   e.target.play();
-                  setHoveringVideo(4);
                 }}
                 onMouseLeave={(e) => {
                   e.target.pause();
-                  setHoveringVideo(0);
                 }}
                 muted
                 loop
