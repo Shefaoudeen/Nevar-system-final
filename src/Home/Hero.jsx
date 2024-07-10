@@ -32,7 +32,6 @@ const Hero = () => {
   }, []);
 
   const handleOnClick = ({ target }) => {
-
     clearInterval(videoInterval); //clearing interval so that switching to other videos will restart the timer
     setCurrVideo(target.id);
   };
@@ -66,9 +65,9 @@ const Hero = () => {
         />
       </div>
       <div
-        className={`flex w-[300vw] -translate-x-[${
-          currVideo * 100
-        }vw] duration-1000`}
+        className={`flex w-[300vw] duration-1000` }
+        style={{transform: `translateX(${-currVideo*100}vw)`}}
+
       >
         <div className="pt-2 rounded-3xl relative w-screen h-screen">
           <div
