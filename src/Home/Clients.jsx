@@ -116,7 +116,7 @@ const Clients = () => {
       </section>
       <section className="flex flex-col mt-10">
         <div className="flex gap-4 justify-center text-center text-5xl font-semibold">
-          <h1>Technical</h1>
+          <h1>Our</h1>
           <h2 className="text-yellow-400">Partners</h2>
         </div>
         <div className="mt-4 px-10">
@@ -135,21 +135,6 @@ const Clients = () => {
                     ></img>
                   );
                 })}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="flex flex-col mt-10">
-        <div className="flex gap-4 justify-center text-center text-5xl font-semibold">
-          <h1>Funded</h1>
-          <h2 className="text-yellow-400">Partners</h2>
-        </div>
-        <div className="mt-4 px-10">
-          {/* clients logo horizontal scroll */}
-          <div className="flex flex-col gap-6 my-10 logos-center justify-center bg-white rounded-xl shadow-2xl">
-            <div className=" py-2 md:py-4 w-full flex-wrap overflow-hidden">
-              <div id="TechnicalScroll" className={`flex justify-evenly`}>
                 {FundedLogo.map((logo, index) => {
                   return (
                     <img

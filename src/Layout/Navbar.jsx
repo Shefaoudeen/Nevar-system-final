@@ -8,7 +8,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex w-screen justify-center absolute z-50">
+    <nav className="flex w-screen justify-between px-10 absolute z-50">
+      <button>chumma</button>
       <ul className="flex backdrop-blur-xl gap-8 text-xl py-3 px-[100px] bg-white rounded-b-[200px] relative shadow-xl shadow-black/50">
         {navbar_details.map((ele) => {
           return (
@@ -23,6 +24,9 @@ const Navbar = () => {
           );
         })}
       </ul>
+      <button className="bg-yellow-300 px-4 rounded-xl mt-3 font-bold">
+        Contact Us
+      </button>
     </nav>
   );
 };

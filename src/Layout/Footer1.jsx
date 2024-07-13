@@ -13,14 +13,16 @@ const Footer1 = () => {
           </div>
           <div>
             <h1 className="text-white poppins-semibold mb-1">Products</h1>
-            <p>Agricultural UAS</p>
-            <p>Remote Sensing UAS</p>
-            <p>Unmanned Ground</p>
-            <p>Vehicle</p>
+            <p>Photon</p>
+            <p>Coming Soon</p>
+            <p>Coming Soon</p>
           </div>
           <div>
-            <h1 className="text-white poppins-semibold mb-1">Blogs</h1>
-            <p>News Centre</p>
+            <h1 className="text-white poppins-semibold mb-1">Services</h1>
+            <p>Aerial Archaeological Survey</p>
+            <p>Aerial Mapping</p>
+            <p>Aerial Inspection</p>
+            <p>Virtual Reality</p>
           </div>
           <div>
             <h1 className="text-white poppins-semibold mb-1">Socials</h1>
