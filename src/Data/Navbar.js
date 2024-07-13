@@ -8,11 +8,11 @@ const navbar_details = [
     id: 2,
   },
   {
-    title: "Blog",
+    title: "Services",
     id: 3,
   },
   {
-    title: "Services",
+    title: "Blogs",
     id: 4,
   },
 ];

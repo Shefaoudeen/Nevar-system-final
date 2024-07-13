@@ -8,7 +8,7 @@ export default function App() {
   const [loading, setLoading] = useState(true);
 
   setTimeout(() => {
-    setLoading(true);
+    setLoading(false);
   }, 6000);
 
   return (

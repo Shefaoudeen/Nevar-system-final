@@ -27,7 +27,10 @@ import funded1 from "./FundedPartners/funded1.png";
 import funded2 from "./FundedPartners/funded2.png";
 import funded3 from "./FundedPartners/funded3.jpg";
 
+import Logo from "./nevar.png";
+
 export {
+  Logo,
   client1,
   client2,
   client3,
@@ -50,5 +53,5 @@ export {
   technical4,
   funded1,
   funded2,
-  funded3
+  funded3,
 };
