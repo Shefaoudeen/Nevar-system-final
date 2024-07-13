@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   const aboutRef = useRef(null);
-  const [statsInView,setStatsInView] = useState(false);
+  const [statsInView, setStatsInView] = useState(false);
 
   useGSAP(() => {
     // const content = gsap.utils.toArray(aboutRef.current);
@@ -44,7 +44,6 @@ const About = () => {
         onToggle: () => setStatsInView(true),
       },
     });
-
   }, []);
 
   const stats = [
@@ -130,14 +129,15 @@ const About = () => {
         </button>
       </div>
       <div className="flex poppins-regular w-screen justify-around px-10 mb-[100px] stats">
-        {stats.map((ele,index) => {
+        {stats.map((ele, index) => {
           return (
             <div className="text-center" key={index}>
               <h1 className="text-8xl bruno-ace-sc-regular">
                 {statsInView && (
-                <CountUp start={0} end={ele.num} duration={2}></CountUp> 
+                  <CountUp start={0} end={ele.num} duration={2}></CountUp>
                 )}
-                +</h1>
+                +
+              </h1>
               <h1 className="text-indigo-500 poppins-medium text-xl">
                 {ele.text}
               </h1>
