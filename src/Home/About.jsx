@@ -12,18 +12,29 @@ const About = () => {
   const [statsInView,setStatsInView] = useState(false);
 
   useGSAP(() => {
-    const content = gsap.utils.toArray(aboutRef.current);
+    // const content = gsap.utils.toArray(aboutRef.current);
 
-    content.forEach((cont) => {
-      gsap.to(cont, {
-        translateY: 0,
-        opacity: "100%",
-        scrollTrigger: {
-          trigger: content,
-          start: "top, center",
-        },
-      });
-    });
+    // content.forEach((cont) => {
+    //   gsap.to(cont, {
+    //     translateY: 0,
+    //     opacity: "100%",
+    //     scrollTrigger: {
+    //       trigger: content,
+    //       start: "top, center",
+    //     },
+    //   });
+    // });
+
+    gsap.from('.about-text',{
+      y : 200,
+      opacity : 0,
+      duration : 1,
+      // stagger : 0.3,
+      scrollTrigger : {
+        trigger : '.about-text',
+        start : 'start bottom'
+      }
+    })
 
     gsap.to(".stats", {
       scrollTrigger: {
@@ -57,16 +68,16 @@ const About = () => {
   return (
     <section className="relative bg-[#F7F7F7] min-h-screen flex w-full justify-center items-center flex-col">
       <div
-        className="text-center text-5xl poppins-regular mt-[300px] translate-y-[100px] opacity-0"
+        className="text-center text-5xl poppins-regular mt-[300px] "
         id="title"
         ref={aboutRef}
       >
-        <h1>
+        <h1 className="about-text">
           <span className="text-yellow-400 poppins-medium">Nevar Systems</span>{" "}
           develops cutting-edge
         </h1>
-        <h1>drone solutions for complex environments.</h1>
-        <h1>Cost-effective and time-efficient.</h1>
+        <h1 className="about-text">drone solutions for complex environments.</h1>
+        <h1 className="about-text">Cost-effective and time-efficient.</h1>
       </div>
       <div className="pt-20 w-screen flex flex-col justify-center items-center">
         <h1 className="text-5xl poppins-semibold text-indigo-800 ">
