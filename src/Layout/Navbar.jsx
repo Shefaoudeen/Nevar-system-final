@@ -28,10 +28,10 @@ ctx1.beginPath();
 //ctx1.lineTo(20,100);
 //ctx1.lineTo(100,20);
 
-ctx1.moveTo(80,75);
+ctx1.moveTo(80,65);
 ctx1.lineTo(80,0);
 ctx1.lineTo(0,0)
-ctx1.lineTo(80,75);;
+ctx1.lineTo(80,65);;
 
 ctx1.fillStyle="white"
 // Draw it
@@ -54,7 +54,7 @@ ctx2.beginPath();
 
 ctx2.moveTo(0,0);
 ctx2.lineTo(80,0);
-ctx2.lineTo(0,75);
+ctx2.lineTo(0,65);
 ctx2.lineTo(0,0);
 
 ctx2.fillStyle="white"
@@ -74,7 +74,7 @@ ctx2.fill();
   return (
     <nav className="flex w-screen justify-center absolute z-50 navbar">
       <div className="flex">
-      <canvas id="myCanvas1" width="80" height="75" className="">
+      <canvas id="myCanvas1" width="80" height="65" className="">
       Sorry, your browser does not support canvas1.
       </canvas>
       <ul className="flex backdrop-blur-xl gap-8 text-xl py-3 px-2 bg-white relative ">
@@ -91,7 +91,7 @@ ctx2.fill();
           );
         })}
       </ul>
-      <canvas id="myCanvas2" width="80" height="75" className="">
+      <canvas id="myCanvas2" width="80" height="65" className="">
       Sorry, your browser does not support canvas1.
       </canvas>
       </div>
