@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Photon } from "../assets/Videos";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/gsap-core";
+import { Info_icon, watchImg } from "../assets/icons";
 
 let videoInterval;
 
@@ -16,7 +17,7 @@ const Hero = () => {
   useEffect(() => {
     videoInterval = setInterval(() => {
       setCurrVideo((prevState) => ++prevState % 3);
-    }, 5000);
+    }, 6000);
 
     //cleanup function
     return () => clearInterval(videoInterval);
@@ -81,9 +82,8 @@ const Hero = () => {
         <div className="pt-2 rounded-3xl relative w-screen h-screen">
           <video
             src={Photon}
-            autoPlay
+            autoPlay={currVideo == 0 ? true : false}
             muted
-            loop
             className="object-fill -mt-2 h-[100vh] w-[100vw]"
           />
         </div>
@@ -103,6 +103,16 @@ const Hero = () => {
             </h2>{" "}
           </div>
         </div>
+      </div>
+      <div className="absolute bottom-10 w-full justify-center flex gap-20">
+        <button className="my-2 py-1 bg-slate-900 bg-opacity-75 text-white border border-black flex items-center gap-2 px-5 rounded-full backdrop-blur-xl shadow-2xl shadow-black">
+          <img src={Info_icon} width={27} />
+          Learn More
+        </button>
+        <button className="my-2 bg-slate-900 bg-opacity-75 text-white border border-black flex items-center gap-2 px-5 rounded-full backdrop-blur-xl shadow-2xl shadow-black">
+          <img src={watchImg} alt="" />
+          Watch Video
+        </button>
       </div>
     </section>
   );
